@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Centralized Medical Platform</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    <header>
+        <h1>Centralized Medical Platform</h1>
+    </header>
+    <main>
+        
+        <form id="login" method="post" action="/">
+            <h2>Login</h2>
+            <input type="text" name="username" placeholder="Username" />
+            <input type="password" name="password" placeholder="Password" />
+            <button>Login</button>
+        </form>
+
+        <form method="post" action="/signup">
+                <p>Don't have an account? <button>Sign Up</button> </p>
+        </form>
+
+
+        <% if (typeof error !== 'undefined' && error) { %>
+            <script>alert("Invalid Username or Password");</script>
+        <% } %>
+
+
+    </main>
+</body>
+</html>

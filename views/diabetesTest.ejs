@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Tests</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+        .report-box {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 1rem 1.5rem;
+            margin: 1rem auto;
+            max-width: 600px;
+            line-height: 1.5rem;
+        }
+
+        .report-box li {
+            margin: 0.4rem 0;
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Diabetes reports</h1>
+    </header>
+    <ul>
+        <% Diabetes.forEach(d => { %>
+        <div class="report-box">
+            <li>Date of Report - <%= d.dateOfReport %></li>
+            <li>Fasting Sugar (after eating) - <%= d.fastingSugar %></li>
+            <li>Post Sugar (before eating) - <%= d.postSugar %></li>
+            <li>Oral Glucose - <%= d.oralGlucose %></li>
+            <li>Urine Glucose - <%= d.urineGlucose %></li>
+        </div>
+        <% }) %>
+    </ul>
+
+    <form method="get" action="/newDiabetesTest">
+        <button type="submit">Add new report</button>
+    </form>
+
+    <a href="http://localhost:8080/user">back</a>
+
+</body>
+</html>

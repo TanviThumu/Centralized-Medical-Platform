@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Diabetes report</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    
+    <form method="post" action="/newDiabetesTest">
+        <input type="text" name="fastingSugar" placeholder="Enter fasting sugar" required />
+        <input type="text" name="postSuagr" placeholder="Enter post sugar" required />
+        <input type="text" name="oralGlucose" placeholder="Enter oral glucose" required />
+        <input type="text" name="urineGlucose" placeholder="Enter urine glucose" required />
+        <input type="date" name="dateOfReport" placeholder="Enter date of report" required />
+        <button type="submit">Add new report</button>
+    </form>
+
+</body>
+</html>
